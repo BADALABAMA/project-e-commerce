@@ -1,0 +1,125 @@
+@import url(../styles/variables.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+#app {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'main main section'
+    'footer footer footer';
+  background: var(--main-bg);
+  height: 1280px;
+  width: 1900px;
+}
+
+.header {
+  position: relative;
+  grid-area: header;
+  border: none;
+  border-radius: 30px;
+  height: 5em;
+  margin: var(--margin-xs);
+  background: rgb(7, 7, 7);
+}
+
+.logo {
+  position: relative;
+  left: 2em;
+  top: -0.1em;
+  width: 5em;
+  margin-left: var(--margin-xs);
+  margin-top: var(--margin-xs);
+}
+
+.login {
+  display: flex;
+  justify-content: end;
+  font-size: var(--fs-xs);
+  margin-right: var(--margin-s);
+  padding: var(--padding-xs);
+  text-transform: uppercase;
+  font-family: var(--ff-open-sans-600);
+  color: var(--white-bg);
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: -4em;
+}
+.nav-link {
+  padding: var(--padding-xs);
+  margin-right: var(--margin-s);
+  text-transform: uppercase;
+  font-family: var(--ff-open-sans-600);
+  font-size: var(--fs-xs);
+  color: var(--white-bg);
+}
+
+.main {
+  grid-area: main;
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  height: 66em;
+  width: 46em;
+  margin-left: var(--margin-m);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  grid-area: section;
+  position: relative;
+  left: 3em;
+  border: none;
+  border-radius: 30px;
+  height: 66em;
+  width: 48em;
+  margin-left: var(--margin-xxxl);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  grid-area: footer;
+  background: black;
+  margin-top: var(--margin-l);
+  height: 5em;
+  color: var(--third-text-color);
+  font-size: var(--fs-xxs);
+  font-family: var(--ff-open-sans);
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: var(--margin-s);
+}
+
+.copyrights {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: -1em;
+  left: -1em;
+  color: aliceblue;
+  font-family: var(--ff-open-sans);
+  font-size: var(--fs-xxs);
+}
